@@ -1,0 +1,1425 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUGAS UTS PSD &#8212; PROYEK SAIN DATA C</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'UTS_PSD-C_200411100159';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="TUGAS 2 PSD C" href="Tugas%202%20PSD.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Task</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202%20PSD.html"><strong>TUGAS 2 PSD C</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>TUGAS UTS PSD</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yayanmnh/prosaindata/blob/master/docs/UTS_PSD-C_200411100159.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yayanmnh/prosaindata" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yayanmnh/prosaindata/issues/new?title=Issue%20on%20page%20%2FUTS_PSD-C_200411100159.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/UTS_PSD-C_200411100159.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TUGAS UTS PSD</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-uts-psd">
+<h1><strong>TUGAS UTS PSD</strong><a class="headerlink" href="#tugas-uts-psd" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">PySastrawi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting PySastrawi
+  Downloading PySastrawi-1.2.0-py2.py3-none-any.whl (210 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/210.6 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">210.6/210.6 KB</span> <span class=" -Color -Color-Red">8.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: PySastrawi
+Successfully installed PySastrawi-1.2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-2-d5df0069828e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>   <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>     <span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span>   <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">177</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Import library yang dibutuhkan</strong></p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Baca data</strong></p>
+<hr class="docutils" />
+<p>Hilangkan kolom kategori karena yang akan digunakan hanya kolom abstrak saja, kolom kategori akan digunakan sebagai label asli yang berfungsi untuk membandingkan antara label prediksi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/prosaindata/TUGAS/dataset-baru.csv&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Kategori&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># kolom label dihapus karena akan digunakan sebagai label asli</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kategori&#39;</span><span class="p">]</span>
+<span class="n">sentence</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-120ce727-364c-43c9-a365-a790973817ed">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>800</th>
+      <td>804</td>
+      <td>Investasi saham selama ini memiliki resiko ker...</td>
+    </tr>
+    <tr>
+      <th>801</th>
+      <td>805</td>
+      <td>Information Retrieval (IR) merupakan pengambil...</td>
+    </tr>
+    <tr>
+      <th>802</th>
+      <td>806</td>
+      <td>Klasifikasi citra merupakan proses pengelompok...</td>
+    </tr>
+    <tr>
+      <th>803</th>
+      <td>807</td>
+      <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+    </tr>
+    <tr>
+      <th>804</th>
+      <td>808</td>
+      <td>Topik deteksi objek telah menarik perhatian ya...</td>
+    </tr>
+  </tbody>
+</table>
+<p>805 rows × 2 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-120ce727-364c-43c9-a365-a790973817ed')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-120ce727-364c-43c9-a365-a790973817ed button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-120ce727-364c-43c9-a365-a790973817ed');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<p><strong>Proses NLP</strong></p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>case_folding = memperkecil setiap huruf</p></li>
+<li><p>cleaning text = menghilangkan simbol dan http</p></li>
+<li><p>tokenisasi = memecah kalimat menjadi kata</p></li>
+<li><p>stopword = menghilangkan kata yang tidak penting</p></li>
+<li><p>stemming = menjadikan kata dasar</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">case_folding</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+    <span class="n">comment</span> <span class="o">=</span> <span class="n">comment</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">comment</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">case_folding</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">symbols</span> <span class="o">=</span> <span class="s2">&quot;1234567890,!</span><span class="se">\&quot;</span><span class="s2">#$%&amp;()*+-.…/:;&lt;=&gt;?@[\]^_`{|}~</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="k">def</span> <span class="nf">cleaning_text</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+    <span class="n">comment</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s—\s&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">comment</span><span class="p">)</span>
+    <span class="n">comment</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;http\S+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">comment</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">:</span>
+        <span class="n">comment</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">comment</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">comment</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">cleaning_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">comment</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenize</span><span class="p">)</span>
+<span class="n">X</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [sistem, informasi, akademik, siakad, merupaka...
+1      [berjalannya, koneksi, jaringan, komputer, den...
+2      [web, server, adalah, sebuah, perangkat, lunak...
+3      [penjadwalan, kuliah, di, perguruan, tinggi, m...
+4      [seiring, perkembangan, teknologi, yang, ada, ...
+                             ...                        
+800    [investasi, saham, selama, ini, memiliki, resi...
+801    [information, retrieval, ir, merupakan, pengam...
+802    [klasifikasi, citra, merupakan, proses, pengel...
+803    [identifikasi, atribut, pejalan, kaki, merupak...
+804    [topik, deteksi, objek, telah, menarik, perhat...
+Name: Abstrak, Length: 805, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">list_stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">stopword_removal</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">comment</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_stopwords</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopword_removal</span><span class="p">)</span>
+<span class="n">X</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [sistem, informasi, akademik, siakad, sistem, ...
+1      [berjalannya, koneksi, jaringan, komputer, lan...
+2      [web, server, perangkat, lunak, server, berfun...
+3      [penjadwalan, kuliah, perguruan, kompleks, per...
+4      [seiring, perkembangan, teknologi, didunia, mu...
+                             ...                        
+800    [investasi, saham, memiliki, resiko, kerugian,...
+801    [information, retrieval, ir, pengambilan, info...
+802    [klasifikasi, citra, proses, pengelompokan, pi...
+803    [identifikasi, atribut, pejalan, kaki, salah, ...
+804    [topik, deteksi, objek, menarik, perhatian, pe...
+Name: Abstrak, Length: 805, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">stemming</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+    <span class="n">kata</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">comment</span><span class="p">:</span>
+        <span class="n">term</span> <span class="o">=</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+        <span class="n">kata</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">kata</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stemming</span><span class="p">)</span>
+<span class="n">X</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [sistem, informasi, akademik, siakad, sistem, ...
+1      [jalan, koneksi, jaring, komputer, lancar, gan...
+2      [web, server, perangkat, lunak, server, fungsi...
+3      [jadwal, kuliah, guru, kompleks, masalah, vari...
+4      [iring, kembang, teknologi, dunia, muncul, tek...
+                             ...                        
+800    [investasi, saham, milik, resiko, rugi, gera, ...
+801    [information, retrieval, ir, ambil, informasi,...
+802    [klasifikasi, citra, proses, kelompok, piksel,...
+803    [identifikasi, atribut, pejal, kaki, salah, te...
+804    [topik, deteksi, objek, tarik, perhati, kemban...
+Name: Abstrak, Length: 805, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gabung</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">comment</span><span class="p">:</span>
+      <span class="n">sentence</span> <span class="o">+=</span> <span class="n">i</span><span class="o">+</span><span class="s2">&quot; &quot;</span>
+    <span class="k">return</span> <span class="n">sentence</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">gabung</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-314f71ef-ed9e-49e6-90c9-0457bba261ae">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>sistem informasi akademik siakad sistem inform...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>jalan koneksi jaring komputer lancar ganggu ha...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>web server perangkat lunak server fungsi terim...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>jadwal kuliah guru kompleks masalah variabel t...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>iring kembang teknologi dunia muncul teknologi...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>800</th>
+      <td>804</td>
+      <td>investasi saham milik resiko rugi gera harga s...</td>
+    </tr>
+    <tr>
+      <th>801</th>
+      <td>805</td>
+      <td>information retrieval ir ambil informasi simpa...</td>
+    </tr>
+    <tr>
+      <th>802</th>
+      <td>806</td>
+      <td>klasifikasi citra proses kelompok piksel citra...</td>
+    </tr>
+    <tr>
+      <th>803</th>
+      <td>807</td>
+      <td>identifikasi atribut pejal kaki salah teliti k...</td>
+    </tr>
+    <tr>
+      <th>804</th>
+      <td>808</td>
+      <td>topik deteksi objek tarik perhati kembang tekn...</td>
+    </tr>
+  </tbody>
+</table>
+<p>805 rows × 2 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-314f71ef-ed9e-49e6-90c9-0457bba261ae')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-314f71ef-ed9e-49e6-90c9-0457bba261ae button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-314f71ef-ed9e-49e6-90c9-0457bba261ae');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<p><strong>Proses TF-IDF</strong></p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Menginisialisasi objek TfidfVectorizer yang berfungsi untuk mengubah</p></li>
+<li><p>Melakukan pengaplikasian TfidfVectorizer pada dokumen teks dan disimpan</p></li>
+<li><p>Mengkonversi matriks TF-IDF menjadi dataframe Pandas yang merepresentasikan setiap kata pada dokumen teks yang diberi bobot berdasarkan TF-IDF</p></li>
+<li><p>Tampilkan isi dari hasil konversi</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi objek TfidfVectorizer</span>
+<span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+
+<span class="c1"># Terapkan TfidfVectorizer pada dokumen</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Ubah matriks TF-IDF menjadi dataframe Pandas</span>
+<span class="n">df_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_tfidf</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_tfidf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     aalysis  aam  abad  abadi  abai  abdi  ability  abjad  absah  absensi  \
+0        0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+1        0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+2        0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+3        0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+4        0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+..       ...  ...   ...    ...   ...   ...      ...    ...    ...      ...   
+800      0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+801      0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+802      0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+803      0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+804      0.0  0.0   0.0    0.0   0.0   0.0      0.0    0.0    0.0      0.0   
+
+     ...  zara  zat  zcz   zf  zona  zone  zoning  zoom  zucara  zungu  
+0    ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+1    ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+2    ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+3    ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+4    ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+..   ...   ...  ...  ...  ...   ...   ...     ...   ...     ...    ...  
+800  ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+801  ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+802  ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+803  ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+804  ...   0.0  0.0  0.0  0.0   0.0   0.0     0.0   0.0     0.0    0.0  
+
+[805 rows x 6019 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Proses reduksi dimensi</strong></p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Inisialisasi objek PCA</p></li>
+<li><p>Transformasi fitur-fitur dari data training dan data test</p></li>
+<li><p>lihat presentase dari variansi total yang dijelaskan oleh setiap komponen utama yang digunakan untuk memastikan tidak kehilangan informasi yang signifikan dari data setelah reduksi dimensi.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">pca_matrik</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_tfidf</span><span class="p">)</span>
+
+<span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.02125167, 0.01698891, 0.01401261, 0.01216534, 0.00958494,
+       0.0089402 , 0.00814516, 0.00775419, 0.00756691, 0.00718533,
+       0.00670725, 0.0065682 , 0.00637252, 0.00629261, 0.00610832,
+       0.0059331 , 0.00567866, 0.00549367, 0.00532733, 0.00519746])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Proses Clustering menggunakan K-Means</strong></p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>tentukan jumlah cluster yang diinginkan dan random_state=0 yang menentukan nilai seed untuk generator angka acak</p></li>
+<li><p>label hasil clustering disimpan ke dalam variabel labels. Selanjutnya, dibuat sebuah dictionary label_dict yang merepresentasikan kelas masing-masing cluster</p></li>
+<li><p>hasil clustering kemudian dicetak ke layar dalam bentuk list mapped_labels</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">pca_matrik</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span>
+<span class="n">class_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="c1"># Menampilkan jumlah data pada setiap kelas</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">class_counts</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah data kelas </span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 0 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1
+ 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 0 0 1 0 1
+ 1 0 0 1 0 0 1 1 1 1 0 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 0 1 1 1
+ 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 0 0 0 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 0 1 1 1 1 0 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1
+ 1 1 1 1 0 1 0 1 0 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 0 1
+ 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1
+ 0 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1]
+Jumlah data kelas 0: 101
+Jumlah data kelas 1: 704
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;RPL&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;KOMPUTASI&#39;</span><span class="p">}</span>
+<span class="n">mapped_labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">label_dict</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mapped_labels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Tampilan Visualisasi Clustering</strong></p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pca_matrik</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">pca_matrik</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;K-Means Clustering&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;KOMPUTASI&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/388e326dc99bba503803b9aca0636a9170b34a11240980dd9989b5014b91ea59.png" src="_images/388e326dc99bba503803b9aca0636a9170b34a11240980dd9989b5014b91ea59.png" />
+</div>
+</div>
+<p><strong>Perbandingan label asli dengan label prediksi</strong></p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Label asli&#39;</span><span class="p">:</span> <span class="n">label</span><span class="p">,</span> <span class="s1">&#39;label prediksi&#39;</span><span class="p">:</span> <span class="n">mapped_labels</span><span class="p">}</span>
+<span class="n">perbandingan</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">perbandingan</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-c01f0c13-5b90-4fd6-bacf-ace7762ce448">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Label asli</th>
+      <th>label prediksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>RPL</td>
+      <td>KOMPUTASI</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>RPL</td>
+      <td>KOMPUTASI</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RPL</td>
+      <td>KOMPUTASI</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KOMPUTASI</td>
+      <td>KOMPUTASI</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>RPL</td>
+      <td>KOMPUTASI</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>800</th>
+      <td>KOMPUTASI</td>
+      <td>KOMPUTASI</td>
+    </tr>
+    <tr>
+      <th>801</th>
+      <td>KOMPUTASI</td>
+      <td>KOMPUTASI</td>
+    </tr>
+    <tr>
+      <th>802</th>
+      <td>KOMPUTASI</td>
+      <td>RPL</td>
+    </tr>
+    <tr>
+      <th>803</th>
+      <td>KOMPUTASI</td>
+      <td>KOMPUTASI</td>
+    </tr>
+    <tr>
+      <th>804</th>
+      <td>KOMPUTASI</td>
+      <td>KOMPUTASI</td>
+    </tr>
+  </tbody>
+</table>
+<p>805 rows × 2 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c01f0c13-5b90-4fd6-bacf-ace7762ce448')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-c01f0c13-5b90-4fd6-bacf-ace7762ce448 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-c01f0c13-5b90-4fd6-bacf-ace7762ce448');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<p><strong>Hasil yang didapat</strong></p>
+<hr class="docutils" />
+<p>Confusion matrix menunjukkan jumlah data yang terklasifikasi dengan benar dan salah untuk setiap kelas. Accuracy menunjukkan proporsi data yang terklasifikasi dengan benar secara keseluruhan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">confusion</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">mapped_labels</span><span class="p">)</span>
+<span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">mapped_labels</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion matrix:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">{:.2f}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">acc</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion matrix:
+[[433 101]
+ [271   0]]
+Accuracy: 53.79%
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tugas%202%20PSD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>TUGAS 2 PSD C</strong></p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MUHAMMAD NUR HIDAYAT
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
